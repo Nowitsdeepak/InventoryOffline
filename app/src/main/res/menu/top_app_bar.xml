@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <!--    <group android:id="@+id/topAppBar_menu_group">-->
+
+    <item
+        android:id="@+id/menuAddItem"
+        android:icon="@drawable/baseline_add_24"
+        android:title="Add Item"
+        app:showAsAction="ifRoom" />
+
+    <item
+        android:id="@+id/menuStatement"
+        android:icon="@drawable/baseline_list_alt_24"
+        android:title="Statement"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menuClearAll"
+        android:icon="@drawable/baseline_clear_all_24"
+        android:title="Clear"
+        app:showAsAction="never" />
+    <!--    </group>-->
+
+
+</menu>

@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/layout_statement"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="8dp"
+    android:background="@color/light_input_text_background"
+    android:padding="8dp">
+
+
+    <TextView
+        android:id="@+id/tv_statement_product"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center_vertical"
+        android:text="Product"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/linearLayout3"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/linearLayout3"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        app:layout_constraintBottom_toBottomOf="@+id/tv_statement_product"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/tv_statement_product">
+
+        <TextView
+            android:id="@+id/tv_statement_sold"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/inter_bold"
+            android:padding="5dp"
+            android:text="Sold" />
+
+        <TextView
+            android:id="@+id/tv_statement_selling_tprice"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/inter_bold"
+            android:padding="5dp"
+            android:text="Selling" />
+
+        <TextView
+            android:id="@+id/tv_statement_cost_tprice"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/inter_bold"
+            android:padding="5dp"
+            android:text="Cost" />
+
+        <TextView
+            android:id="@+id/tv_statement_total"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:fontFamily="@font/inter_bold"
+            android:padding="5dp"
+            android:text="P&amp;L" />
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

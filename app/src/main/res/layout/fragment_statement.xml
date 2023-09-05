@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingStart="8dp"
+    android:paddingEnd="8dp"
+    tools:context=".ui.StatementFragment">
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/item_statement_list"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/RVStatement"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        app:layout_constraintBottom_toTopOf="@+id/indicator_profit_loss"
+        app:layout_constraintEnd_toEndOf="@+id/include"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/include"
+        app:layout_constraintTop_toBottomOf="@+id/include"
+        tools:listitem="@layout/item_statement_list" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/indicator_profit_loss"
+        style="@style/Widget.MaterialComponents.Button"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#C5FFC8"
+        android:fontFamily="@font/inter_bold"
+        android:padding="8dp"
+        android:text="Profit"
+        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+        android:textColor="?attr/colorOnSurface"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/tv_total_amt"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:strokeColor="?attr/colorOnSurface"
+        app:strokeWidth="1dp" />
+
+    <TextView
+        android:id="@+id/tv_total_amt"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/button_border_radius"
+        android:drawableStart="@drawable/baseline_currency_rupee_24"
+        android:fontFamily="@font/inter_bold"
+        android:gravity="center"
+        android:padding="8dp"
+        android:textAppearance="@style/TextAppearance.Material3.TitleLarge"
+        android:textColor="?attr/colorOnSurface"
+        app:layout_constraintBottom_toBottomOf="@+id/indicator_profit_loss"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/indicator_profit_loss"
+        app:layout_constraintTop_toTopOf="@+id/indicator_profit_loss"
+        app:layout_constraintVertical_bias="0.454"
+        app:strokeColor="?attr/colorOnSurface"
+        app:strokeWidth="1dp"
+        tools:text="00000" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
